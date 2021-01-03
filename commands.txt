@@ -1,0 +1,21 @@
+Note: Before any of these make sure you have a virtual env created and dependencies installed. (Refer README.md)
+
+Open terminal, activate virtualenv and change to project folder
+> env\Scripts\activate
+> cd jenkins-test
+> cd devops_demo
+
+Code quality check
+> flake8
+
+Run tests
+> coverage run -m unittest
+
+Generate coverage report
+> coverage report -m
+
+Generate docs
+> cd docs
+> make clean
+> make html
+This will update the docs in docs\html folder. This html folder (with the build name) need to be pushed to s3.
